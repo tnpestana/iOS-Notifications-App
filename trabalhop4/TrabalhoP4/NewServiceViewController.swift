@@ -6,12 +6,16 @@ class NewServiceViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var newServiceTitle: UITextField!
-    @IBOutlet weak var newServiceSubject: UITextField!
+    @IBOutlet weak var newServiceDescription: UITextView!
     @IBOutlet weak var addButton: UIButton!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // TextView com Rounded Corners
+        newServiceDescription.clipsToBounds = true
+        newServiceDescription.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,13 +28,13 @@ class NewServiceViewController: UIViewController {
     
     @IBAction func saveNewService(_ sender: Any) {
         
-        if newServiceTitle.text != "" && newServiceSubject.text != "" {
+        if newServiceTitle.text != "" && newServiceDescription.text != "" {
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
             let newService = Service(context: context)
-            newService.title = newServiceTitle.text!
-            newService.subject = newServiceSubject.text!
+            newService.requestTitle = newServiceTitle.text!
+            newService.requestDescription = newServiceDescription.text!
             newService.requestDate = Date() as NSDate
         
             //save to core data
@@ -39,7 +43,7 @@ class NewServiceViewController: UIViewController {
             createAlert(titleText: "Alert", messageText: "Request saved successfully")
             
             newServiceTitle.text = ""
-            newServiceSubject.text = ""
+            newServiceDescription.text = ""
             
         } else {
         

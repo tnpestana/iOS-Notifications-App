@@ -21,8 +21,8 @@ class SingleRequestViewController: UIViewController {
         dateText.layer.cornerRadius = 5
         
 
-        titleText.text = currentService.title
-        descriptionText.text = currentService.subject
+        titleText.text = currentService.requestTitle
+        descriptionText.text = currentService.requestDescription
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         let formattedDate = dateFormatter.string(from: currentService.requestDate! as Date)

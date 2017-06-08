@@ -19,7 +19,7 @@ extension Service {
     @NSManaged public var endDate: NSDate?
     @NSManaged public var requestDate: NSDate?
     @NSManaged public var startDate: NSDate?
-    @NSManaged public var subject: String?
-    @NSManaged public var title: String?
+    @NSManaged public var requestDescription: String?
+    @NSManaged public var requestTitle: String?
 
 }
