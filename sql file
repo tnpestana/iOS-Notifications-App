@@ -1,0 +1,12 @@
+
+if not exists (select * from sysobjects where name='requests')
+    create table requests (
+        requestID int NOT NULL AUTO_INCREMENT,
+        requestTitle varchar(255) NOT NULL,
+        requestDescription varchar(255) NOT NULL,
+        requestDate varchar(255) NOT NULL,
+        client varchar(255),
+        assistant varchar(255),
+        PRIMARY KEY (requestID)
+    )
+go
