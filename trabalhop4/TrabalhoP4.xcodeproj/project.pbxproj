@@ -20,7 +20,7 @@
 		8BB436C21EE706C80007944C /* SingleRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB436C11EE706C80007944C /* SingleRequestViewController.swift */; };
 		8BB436C61EE7FBAD0007944C /* Service+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB436C51EE7FBAD0007944C /* Service+CoreDataClass.swift */; };
 		8BB436C81EE7FBF40007944C /* Service+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB436C71EE7FBF40007944C /* Service+CoreDataProperties.swift */; };
-		8BB4370B1EEAE4F30007944C /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4370A1EEAE4F30007944C /* Sync.swift */; };
+		8BB4370B1EEAE4F30007944C /* Connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4370A1EEAE4F30007944C /* Connect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		8BB436C11EE706C80007944C /* SingleRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRequestViewController.swift; sourceTree = "<group>"; };
 		8BB436C51EE7FBAD0007944C /* Service+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8BB436C71EE7FBF40007944C /* Service+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8BB4370A1EEAE4F30007944C /* Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sync.swift; sourceTree = "<group>"; };
+		8BB4370A1EEAE4F30007944C /* Connect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +118,12 @@
 				8B0531A51EE6A6C000E48633 /* MainTableViewCell.swift */,
 				8BB436BF1EE6BDE80007944C /* NewServiceViewController.swift */,
 				8BB436C11EE706C80007944C /* SingleRequestViewController.swift */,
+				8BB4370A1EEAE4F30007944C /* Connect.swift */,
 				8B0531741EE6A4AE00E48633 /* Main.storyboard */,
 				8B05317A1EE6A4AE00E48633 /* Assets.xcassets */,
 				8B05317C1EE6A4AE00E48633 /* LaunchScreen.storyboard */,
 				8B05317F1EE6A4AE00E48633 /* Info.plist */,
 				8B0531771EE6A4AE00E48633 /* TrabalhoP4.xcdatamodeld */,
-				8BB4370A1EEAE4F30007944C /* Sync.swift */,
 			);
 			path = TrabalhoP4;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				8B0531731EE6A4AE00E48633 /* ViewController.swift in Sources */,
 				8BB436C61EE7FBAD0007944C /* Service+CoreDataClass.swift in Sources */,
 				8B0531791EE6A4AE00E48633 /* TrabalhoP4.xcdatamodeld in Sources */,
-				8BB4370B1EEAE4F30007944C /* Sync.swift in Sources */,
+				8BB4370B1EEAE4F30007944C /* Connect.swift in Sources */,
 				8BB436C01EE6BDE80007944C /* NewServiceViewController.swift in Sources */,
 				8B0531711EE6A4AE00E48633 /* AppDelegate.swift in Sources */,
 				8BB436C81EE7FBF40007944C /* Service+CoreDataProperties.swift in Sources */,
@@ -444,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TrabalhoP4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tnpestana.TrabalhoP4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tnpestana.TrabalhoP4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -456,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TrabalhoP4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tnpestana.TrabalhoP4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tnpestana.TrabalhoP4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

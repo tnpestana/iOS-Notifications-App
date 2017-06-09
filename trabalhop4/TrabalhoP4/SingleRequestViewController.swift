@@ -23,7 +23,7 @@ class SingleRequestViewController: UIViewController {
 
         descriptionText.text = currentRequest.requestDescription
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.dateFormat = "dd.MM.yyyy - HH:mm"
         let formattedDate = dateFormatter.string(from: currentRequest.requestDate! as Date)
         dateText.text = formattedDate
         dateText.sizeToFit()

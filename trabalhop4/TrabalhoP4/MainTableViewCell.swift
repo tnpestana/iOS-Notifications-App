@@ -4,6 +4,7 @@ class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellTitleLabel: UILabel!
     @IBOutlet weak var cellRequestDateLabel: UILabel!
+    @IBOutlet weak var posterNameLabel: UILabel!
     
     
     override func awakeFromNib() {
