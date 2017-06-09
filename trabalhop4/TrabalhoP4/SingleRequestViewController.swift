@@ -14,7 +14,7 @@ class SingleRequestViewController: UIViewController {
         
         navBar.topItem?.title = currentRequest.requestTitle
         
-        // Labels com round corners
+        // Round corners
         descriptionText.layer.masksToBounds = true
         descriptionText.layer.cornerRadius = 5
         dateText.layer.masksToBounds = true
