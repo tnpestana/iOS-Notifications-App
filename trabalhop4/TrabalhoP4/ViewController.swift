@@ -86,8 +86,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier == "SingleRequestSegue" {
             let destinationVC = segue.destination as! SingleRequestViewController
             if let indexPath = self.mainTableView.indexPathForSelectedRow {
-                let selectedService = servicesList[indexPath.row]
-                destinationVC.currentService = selectedService
+                let selectedRequest = servicesList[indexPath.row]
+                destinationVC.currentRequest = selectedRequest
             }
         }
         

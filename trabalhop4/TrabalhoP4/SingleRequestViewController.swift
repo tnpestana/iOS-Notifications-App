@@ -2,30 +2,29 @@ import UIKit
 
 class SingleRequestViewController: UIViewController {
 
-    @IBOutlet weak var titleText: UILabel!
-    @IBOutlet weak var descriptionText: UILabel!
-    @IBOutlet weak var dateText: UILabel!
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var dateText: UITextView!
     
-    var currentService = Service()
+    var currentRequest = Service()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navBar.topItem?.title = currentRequest.requestTitle
+        
         // Labels com round corners
-        titleText.layer.masksToBounds = true
-        titleText.layer.cornerRadius = 5
         descriptionText.layer.masksToBounds = true
         descriptionText.layer.cornerRadius = 5
         dateText.layer.masksToBounds = true
         dateText.layer.cornerRadius = 5
         
 
-        titleText.text = currentService.requestTitle
-        descriptionText.text = currentService.requestDescription
+        descriptionText.text = currentRequest.requestDescription
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        let formattedDate = dateFormatter.string(from: currentService.requestDate! as Date)
+        let formattedDate = dateFormatter.string(from: currentRequest.requestDate! as Date)
         dateText.text = formattedDate
         dateText.sizeToFit()
     }
