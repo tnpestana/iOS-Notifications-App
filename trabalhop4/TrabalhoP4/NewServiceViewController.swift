@@ -45,7 +45,7 @@ class NewServiceViewController: UIViewController {
                 newService.requestDescription = newServiceDescription.text!
                 newService.requestDate = Date() as NSDate
             }
-            // caso seja uma ediçao
+            // caso seja ediçao de um request existente
             else {
                 currentRequest?.requestTitle = newServiceTitle.text!
                 currentRequest?.requestDescription = newServiceDescription.text!
