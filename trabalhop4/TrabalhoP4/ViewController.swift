@@ -47,6 +47,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.cellRequestDateLabel.text = formattedDate
         cell.cellRequestDateLabel.sizeToFit()
         
+        cell.editButton.tag = indexPath.row
+        
         return cell
         
     }
@@ -91,10 +93,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 destinationVC.currentRequest = selectedRequest
             }
         }
-        
+        if segue.identifier == "EditButtonSegue" {
+            let button = sender as! UIButton
+            let destinationVC = segue.destination as! NewServiceViewController
+            let selectedRequest = servicesList[button.tag]
+            destinationVC.currentRequest = selectedRequest
+        }
     }
     
-    
+    /*func editButtonPressed(sender: UIButton) {
+        let buttonRow = sender.tag
+        let destinationVC = segue.destination as!
+        let selectedRequest = servicesList[buttonRow]
+        performSegue(withIdentifier: "EditButtonSegue", sender: sender)
+    }*/
 
 }
 

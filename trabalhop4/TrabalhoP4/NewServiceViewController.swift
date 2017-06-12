@@ -9,6 +9,7 @@ class NewServiceViewController: UIViewController {
     @IBOutlet weak var newServiceDescription: UITextView!
     @IBOutlet weak var addButton: UIButton!
     
+    var currentRequest: Service?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,11 @@ class NewServiceViewController: UIViewController {
         // TextView com Rounded Corners
         newServiceDescription.clipsToBounds = true
         newServiceDescription.layer.cornerRadius = 5
+        
+        if currentRequest != nil {
+            newServiceTitle.text = currentRequest?.requestTitle
+            newServiceDescription.text = currentRequest?.requestDescription
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,12 +37,21 @@ class NewServiceViewController: UIViewController {
         if newServiceTitle.text != "" && newServiceDescription.text != "" {
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-            let newService = Service(context: context)
-            newService.requestTitle = newServiceTitle.text!
-            newService.requestDescription = newServiceDescription.text!
-            newService.requestDate = Date() as NSDate
-        
+            
+            // caso seja um novo request
+            if currentRequest == nil {
+                let newService = Service(context: context)
+                newService.requestTitle = newServiceTitle.text!
+                newService.requestDescription = newServiceDescription.text!
+                newService.requestDate = Date() as NSDate
+            }
+            // caso seja uma ediçao
+            else {
+                currentRequest?.requestTitle = newServiceTitle.text!
+                currentRequest?.requestDescription = newServiceDescription.text!
+                currentRequest?.requestDate = Date() as NSDate
+            }
+            
             //save to core data
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
@@ -47,7 +62,7 @@ class NewServiceViewController: UIViewController {
             
         } else {
         
-            createAlert(titleText: "Alert", messageText: "Please fill all fields")
+            createAlert(titleText: "Alert", messageText: "Please fill in all text fields")
             
         }
         

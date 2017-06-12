@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +29,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gTG-U4-jr3">
                                             <connections>
                                                 <action selector="addService:" destination="BYZ-38-t0r" id="3o8-5v-97L"/>
-                                                <segue destination="hye-Vr-dJ3" kind="show" id="6Ie-2I-6Yi"/>
+                                                <segue destination="hye-Vr-dJ3" kind="show" identifier="AddButtonSegue" id="6Ie-2I-6Yi"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -62,17 +62,34 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gld-Wk-41i">
-                                                    <rect key="frame" x="220" y="45" width="115" height="15"/>
+                                                    <rect key="frame" x="220" y="44" width="114" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVW-oQ-Mdh">
+                                                    <rect key="frame" x="288" y="8" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Edit">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="hye-Vr-dJ3" kind="show" identifier="EditButtonSegue" id="irL-2M-mCB"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellRequestDateLabel" destination="gld-Wk-41i" id="b1f-J9-hDe"/>
                                             <outlet property="cellTitleLabel" destination="nX9-sO-jB2" id="lf4-SK-2Ug"/>
+                                            <outlet property="editButton" destination="SVW-oQ-Mdh" id="RWF-kW-2cK"/>
                                             <outlet property="posterNameLabel" destination="TJy-mT-NoF" id="SYu-xB-9Ce"/>
                                             <segue destination="Nrt-Cv-Zdr" kind="show" identifier="SingleRequestSegue" id="8Vt-aN-UWv"/>
                                         </connections>
@@ -245,6 +262,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yIL-EM-bVv"/>
+        <segue reference="8zb-A0-qBE"/>
+        <segue reference="irL-2M-mCB"/>
     </inferredMetricsTieBreakers>
 </document>
