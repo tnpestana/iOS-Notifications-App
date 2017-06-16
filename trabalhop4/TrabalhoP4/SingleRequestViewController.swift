@@ -34,5 +34,13 @@ class SingleRequestViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - Dismiss action
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 
 }

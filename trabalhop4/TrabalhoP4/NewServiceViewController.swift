@@ -69,6 +69,15 @@ class NewServiceViewController: UIViewController {
     }
     
     
+    // MARK: - Dismiss action
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        
+            dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
     // MARK: - Alert definition
     
     func createAlert(titleText: String, messageText: String) {
