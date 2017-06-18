@@ -5,6 +5,7 @@ class SingleRequestViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var dateText: UITextView!
+    @IBOutlet weak var notificationDateText: UITextView!
     
     var currentRequest = Service()
     
@@ -19,14 +20,19 @@ class SingleRequestViewController: UIViewController {
         descriptionText.layer.cornerRadius = 5
         dateText.layer.masksToBounds = true
         dateText.layer.cornerRadius = 5
+        notificationDateText.layer.masksToBounds = true
+        notificationDateText.layer.cornerRadius = 5
         
 
         descriptionText.text = currentRequest.requestDescription
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy - HH:mm"
-        let formattedDate = dateFormatter.string(from: currentRequest.requestDate! as Date)
+        var formattedDate = dateFormatter.string(from: currentRequest.requestDate! as Date)
         dateText.text = formattedDate
         dateText.sizeToFit()
+        formattedDate = dateFormatter.string(from: currentRequest.notificationDate! as Date)
+        notificationDateText.text = formattedDate
+        notificationDateText.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {

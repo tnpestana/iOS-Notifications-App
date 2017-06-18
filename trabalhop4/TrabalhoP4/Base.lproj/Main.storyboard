@@ -167,13 +167,13 @@
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lTq-AL-sSF">
-                                <rect key="frame" x="16" y="116" width="343" height="461"/>
+                                <rect key="frame" x="16" y="116" width="343" height="386"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iuE-W4-npi">
-                                <rect key="frame" x="16" y="614" width="343" height="33"/>
+                                <rect key="frame" x="16" y="539" width="343" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="kal-e8-xmw"/>
@@ -190,8 +190,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRM-b0-faK">
+                                <rect key="frame" x="16" y="580" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gTa-6V-lkF">
+                                <rect key="frame" x="16" y="609" width="343" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="ccA-W9-fzM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biR-yc-cW9">
-                                <rect key="frame" x="16" y="585" width="108" height="21"/>
+                                <rect key="frame" x="16" y="510" width="108" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="Gza-vn-aoH"/>
                                 </constraints>
@@ -202,33 +217,40 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fr9-sC-h2N" firstAttribute="top" secondItem="iuE-W4-npi" secondAttribute="bottom" constant="20" id="0yt-dU-tqz"/>
                             <constraint firstItem="lTq-AL-sSF" firstAttribute="top" secondItem="vmx-BF-qDs" secondAttribute="bottom" constant="8" id="1k5-SO-s3A"/>
+                            <constraint firstItem="iuE-W4-npi" firstAttribute="top" secondItem="biR-yc-cW9" secondAttribute="bottom" constant="8" id="2dM-qJ-SWC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lTq-AL-sSF" secondAttribute="leading" id="2fi-0T-M4y"/>
                             <constraint firstItem="vmx-BF-qDs" firstAttribute="top" secondItem="ooe-P1-4xp" secondAttribute="bottom" constant="23" id="3vh-Ul-JuU"/>
+                            <constraint firstItem="gTa-6V-lkF" firstAttribute="top" secondItem="cRM-b0-faK" secondAttribute="bottom" constant="8" id="7Wm-7m-3Zh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="iuE-W4-npi" secondAttribute="leading" id="8ha-Ig-kiV"/>
-                            <constraint firstItem="biR-yc-cW9" firstAttribute="top" secondItem="lTq-AL-sSF" secondAttribute="bottom" constant="8" id="CIl-dh-5Mv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iuE-W4-npi" secondAttribute="trailing" id="Ca2-hn-KOW"/>
                             <constraint firstItem="iuE-W4-npi" firstAttribute="top" secondItem="biR-yc-cW9" secondAttribute="bottom" constant="8" id="G1C-zy-ekQ"/>
+                            <constraint firstItem="cRM-b0-faK" firstAttribute="top" secondItem="iuE-W4-npi" secondAttribute="bottom" constant="8" id="Q7b-HW-eZc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gTa-6V-lkF" secondAttribute="trailing" id="Sl6-4y-R67"/>
                             <constraint firstItem="ooe-P1-4xp" firstAttribute="leading" secondItem="0OT-dE-EzN" secondAttribute="leadingMargin" constant="-16" id="SsQ-7p-Hzd"/>
                             <constraint firstItem="lTq-AL-sSF" firstAttribute="centerX" secondItem="0OT-dE-EzN" secondAttribute="centerX" id="VfF-19-zui"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lTq-AL-sSF" secondAttribute="trailing" id="bKX-1d-ggm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="biR-yc-cW9" secondAttribute="leading" id="lhe-TQ-apF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ooe-P1-4xp" secondAttribute="trailing" constant="-16" id="oQ4-Qw-3J2"/>
+                            <constraint firstItem="biR-yc-cW9" firstAttribute="top" secondItem="lTq-AL-sSF" secondAttribute="bottom" constant="8" id="po3-47-Y66"/>
                             <constraint firstAttribute="leadingMargin" secondItem="vmx-BF-qDs" secondAttribute="leading" id="tbW-5J-t5f"/>
                             <constraint firstItem="ooe-P1-4xp" firstAttribute="top" secondItem="6pC-ke-vc6" secondAttribute="bottom" id="tmz-Kr-LAg"/>
+                            <constraint firstItem="Fr9-sC-h2N" firstAttribute="top" secondItem="gTa-6V-lkF" secondAttribute="bottom" constant="25" id="ub6-Yw-DgH"/>
                             <constraint firstItem="iuE-W4-npi" firstAttribute="centerX" secondItem="0OT-dE-EzN" secondAttribute="centerX" id="w8y-YN-AbT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gTa-6V-lkF" secondAttribute="leading" id="wRj-OG-exR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cRM-b0-faK" secondAttribute="leading" id="y4H-kM-wDE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dateText" destination="iuE-W4-npi" id="jMq-C2-R7v"/>
                         <outlet property="descriptionText" destination="lTq-AL-sSF" id="7MR-rW-X1Q"/>
                         <outlet property="navBar" destination="ooe-P1-4xp" id="G8O-1C-bIv"/>
+                        <outlet property="notificationDateText" destination="gTa-6V-lkF" id="5eE-qs-Gtr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFR-K2-jNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="116"/>
+            <point key="canvasLocation" x="1760.8" y="115.59220389805098"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="qTU-mA-FdW">
