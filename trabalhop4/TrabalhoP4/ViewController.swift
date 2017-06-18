@@ -39,13 +39,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "mainTableCell", for: indexPath) as! MainTableViewCell
         let service = servicesList[indexPath.row]
         
-        cell.posterNameLabel.sizeToFit()
+        
         cell.cellTitleLabel.text = service.requestTitle
+        // DateFormatter
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy - HH:mm"
-        let formattedDate = dateFormatter.string(from: service.requestDate! as Date)
+        // Submission Date
+        var formattedDate = "Created: " + dateFormatter.string(from: service.requestDate! as Date)
         cell.cellRequestDateLabel.text = formattedDate
+        cell.cellRequestDateLabel.textAlignment = .left
         cell.cellRequestDateLabel.sizeToFit()
+        // Notification Date
+        formattedDate = "Notification: " + dateFormatter.string(from: service.notificationDate! as Date)
+        cell.notificationDateLabel.sizeToFit()
+        cell.notificationDateLabel.text = formattedDate
         
         cell.editButton.tag = indexPath.row
         

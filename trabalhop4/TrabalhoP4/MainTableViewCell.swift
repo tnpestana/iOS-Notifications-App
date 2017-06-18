@@ -4,7 +4,7 @@ class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellTitleLabel: UILabel!
     @IBOutlet weak var cellRequestDateLabel: UILabel!
-    @IBOutlet weak var posterNameLabel: UILabel!
+    @IBOutlet weak var notificationDateLabel: UILabel!
     
     @IBOutlet weak var editButton: UIButton!
     
