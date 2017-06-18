@@ -46,7 +46,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SF0-jK-gzH" id="q0U-qm-qGa">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="68"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiago Pestana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJy-mT-NoF">
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+            <point key="canvasLocation" x="282" y="117"/>
         </scene>
         <!--Single Request View Controller-->
         <scene sceneID="CIe-WY-KDQ">
@@ -227,7 +227,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFR-K2-jNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481" y="849"/>
+            <point key="canvasLocation" x="1762" y="116"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="qTU-mA-FdW">
+            <objects>
+                <viewController id="E9K-dS-GkR" customClass="MapViewController" customModule="TrabalhoP4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eoa-wG-Ubw"/>
+                        <viewControllerLayoutGuide type="bottom" id="gAY-42-JDu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sbJ-NE-15P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ozu-Ia-40O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFF-oW-iy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016.8" y="-566.26686656671666"/>
         </scene>
         <!--New Service View Controller-->
         <scene sceneID="3uL-gf-VZ6">
@@ -288,7 +312,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lva-oo-SSw">
-                                <rect key="frame" x="16" y="184" width="343" height="425"/>
+                                <rect key="frame" x="16" y="184" width="343" height="201"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -302,38 +326,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aJ1-ku-irI">
+                                <rect key="frame" x="16" y="393" width="343" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="519494906.97051698">
+                                    <!--2017-06-18 16:08:26 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="m2z-Pc-9xA" secondAttribute="leading" id="1a4-qj-3nw"/>
                             <constraint firstItem="ZfK-kR-5ea" firstAttribute="centerX" secondItem="36D-3Q-suW" secondAttribute="centerX" id="36A-Kv-w0i"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ZfK-kR-5ea" secondAttribute="leading" id="7Rg-y9-rNx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aJ1-ku-irI" secondAttribute="leading" id="9NK-Gt-Ewc"/>
                             <constraint firstItem="54O-LH-jKP" firstAttribute="top" secondItem="86Z-tt-mrD" secondAttribute="bottom" constant="20" id="Dqo-on-vhj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="PjA-ip-PLO" secondAttribute="leading" id="L7z-Ng-utl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lva-oo-SSw" secondAttribute="trailing" id="MaJ-At-osC"/>
+                            <constraint firstItem="aJ1-ku-irI" firstAttribute="centerX" secondItem="36D-3Q-suW" secondAttribute="centerX" id="Ovn-xX-SdQ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lva-oo-SSw" secondAttribute="leading" id="TIO-q5-Ihn"/>
+                            <constraint firstItem="86Z-tt-mrD" firstAttribute="top" secondItem="aJ1-ku-irI" secondAttribute="bottom" constant="8" id="UzG-RP-m3C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4AF-lW-3bh" secondAttribute="trailing" constant="-16" id="Y7i-bL-RSJ"/>
                             <constraint firstItem="86Z-tt-mrD" firstAttribute="centerX" secondItem="36D-3Q-suW" secondAttribute="centerX" id="ZwQ-5j-MJi"/>
-                            <constraint firstItem="86Z-tt-mrD" firstAttribute="top" secondItem="lva-oo-SSw" secondAttribute="bottom" constant="8" id="aiC-4r-48T"/>
                             <constraint firstItem="lva-oo-SSw" firstAttribute="centerX" secondItem="36D-3Q-suW" secondAttribute="centerX" id="egC-JG-WBr"/>
                             <constraint firstItem="4AF-lW-3bh" firstAttribute="top" secondItem="uqL-j3-GSR" secondAttribute="bottom" id="fMs-2H-cbQ"/>
                             <constraint firstItem="PjA-ip-PLO" firstAttribute="top" secondItem="ZfK-kR-5ea" secondAttribute="bottom" constant="8" id="fYL-Yy-hlj"/>
                             <constraint firstItem="4AF-lW-3bh" firstAttribute="leading" secondItem="36D-3Q-suW" secondAttribute="leadingMargin" constant="-16" id="i5q-0F-DPI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aJ1-ku-irI" secondAttribute="trailing" id="ipy-Gx-81H"/>
                             <constraint firstItem="m2z-Pc-9xA" firstAttribute="top" secondItem="4AF-lW-3bh" secondAttribute="bottom" constant="24" id="lY2-na-CvK"/>
                             <constraint firstItem="lva-oo-SSw" firstAttribute="top" secondItem="PjA-ip-PLO" secondAttribute="bottom" constant="8" id="oDi-Gn-uPr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZfK-kR-5ea" secondAttribute="trailing" id="rJE-uP-0fp"/>
                             <constraint firstItem="ZfK-kR-5ea" firstAttribute="top" secondItem="m2z-Pc-9xA" secondAttribute="bottom" constant="8" id="vAc-oZ-4Qf"/>
+                            <constraint firstItem="aJ1-ku-irI" firstAttribute="top" secondItem="lva-oo-SSw" secondAttribute="bottom" constant="8" id="wzz-hc-l4R"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="86Z-tt-mrD" id="NcT-4y-H4L"/>
+                        <outlet property="datePicker" destination="aJ1-ku-irI" id="pQL-CE-GMU"/>
                         <outlet property="newServiceDescription" destination="lva-oo-SSw" id="nd3-bE-gUU"/>
                         <outlet property="newServiceTitle" destination="ZfK-kR-5ea" id="ROa-F4-7ou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUU-V0-evJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="118"/>
+            <point key="canvasLocation" x="1024.8" y="117.39130434782609"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

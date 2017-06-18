@@ -16,10 +16,8 @@ extension Service {
         return NSFetchRequest<Service>(entityName: "Service")
     }
 
-    @NSManaged public var endDate: NSDate?
     @NSManaged public var requestDate: NSDate?
-    @NSManaged public var startDate: NSDate?
     @NSManaged public var requestDescription: String?
     @NSManaged public var requestTitle: String?
-
+    @NSManaged public var notificationDate: NSDate?
 }
