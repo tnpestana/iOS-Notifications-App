@@ -48,16 +48,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "mainTableCell", for: indexPath) as! MainTableViewCell
         let service = servicesList[indexPath.row]
         
-        
         cell.cellTitleLabel.text = service.requestTitle
+        
         // DateFormatter
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy - HH:mm"
+        
         // Submission Date
         var formattedDate = "Created: " + dateFormatter.string(from: service.requestDate! as Date)
         cell.cellRequestDateLabel.text = formattedDate
         cell.cellRequestDateLabel.textAlignment = .left
         cell.cellRequestDateLabel.sizeToFit()
+        
         // Notification Date
         formattedDate = "Notification: " + dateFormatter.string(from: service.notificationDate! as Date)
         cell.notificationDateLabel.sizeToFit()
@@ -69,13 +71,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // Definir o número de células a criar de acordo com o número de objetos Service existentes
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    
         return servicesList.count
         
     }
     
-    // swipe left for delete
+    // Swipe left for delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
@@ -109,7 +112,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // Definir o comportamento das diferentes segues possiveis
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Se for uma visualizaçao de uma entrada, chamar o SingleRequestViewController e passar a informaçao do Service escolhido
         if segue.identifier == "SingleRequestSegue" {
             let destinationVC = segue.destination as! SingleRequestViewController
             if let indexPath = self.mainTableView.indexPathForSelectedRow {
@@ -117,6 +123,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 destinationVC.currentRequest = selectedRequest
             }
         }
+        
+        // Se for uma ediçao de uma entrada, chamar o NewServiceViewController e passar a informaçao do Service escolhido
         if segue.identifier == "EditButtonSegue" {
             let button = sender as! UIButton
             let destinationVC = segue.destination as! NewServiceViewController
@@ -124,13 +132,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             destinationVC.currentRequest = selectedRequest
         }
     }
-    
-    /*func editButtonPressed(sender: UIButton) {
-        let buttonRow = sender.tag
-        let destinationVC = segue.destination as!
-        let selectedRequest = servicesList[buttonRow]
-        performSegue(withIdentifier: "EditButtonSegue", sender: sender)
-    }*/
-
 }
 
