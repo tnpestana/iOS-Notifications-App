@@ -46,7 +46,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SF0-jK-gzH" id="q0U-qm-qGa">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="88.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LIc-zl-2aL">
@@ -73,7 +73,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX9-sO-jB2">
-                                                    <rect key="frame" x="8" y="8" width="272" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="49" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -92,19 +92,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="leadingMargin" secondItem="TJy-mT-NoF" secondAttribute="leading" id="0n6-d0-jgE"/>
-                                                <constraint firstItem="SVW-oQ-Mdh" firstAttribute="top" secondItem="q0U-qm-qGa" secondAttribute="topMargin" id="4l5-FR-mQN"/>
-                                                <constraint firstItem="TJy-mT-NoF" firstAttribute="top" secondItem="nX9-sO-jB2" secondAttribute="bottom" constant="25" id="4s1-kx-zMN"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="SVW-oQ-Mdh" secondAttribute="trailing" constant="1" id="6zB-Q0-qTN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gld-Wk-41i" secondAttribute="bottom" constant="25" id="9ly-es-XtJ"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="nX9-sO-jB2" secondAttribute="leading" id="BeN-WI-6iu"/>
-                                                <constraint firstItem="gld-Wk-41i" firstAttribute="top" secondItem="nX9-sO-jB2" secondAttribute="bottom" constant="3" id="SSa-bF-PU5"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="TJy-mT-NoF" secondAttribute="bottom" constant="2" id="Y4x-wm-7sB"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="gld-Wk-41i" secondAttribute="leading" id="ZIW-Mp-ptX"/>
-                                                <constraint firstItem="SVW-oQ-Mdh" firstAttribute="leading" secondItem="nX9-sO-jB2" secondAttribute="trailing" constant="8" id="d6h-mw-On9"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="TJy-mT-NoF" secondAttribute="bottom" constant="2.5" id="eg7-a2-fzG"/>
-                                                <constraint firstAttribute="topMargin" secondItem="nX9-sO-jB2" secondAttribute="top" id="iEP-NG-Pt4"/>
-                                                <constraint firstItem="TJy-mT-NoF" firstAttribute="top" secondItem="gld-Wk-41i" secondAttribute="bottom" constant="7.5" id="uSg-yE-tG2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SVW-oQ-Mdh" secondAttribute="trailing" constant="1" id="3q4-lY-84J"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="nX9-sO-jB2" secondAttribute="leading" id="D3I-vm-PRu"/>
+                                                <constraint firstItem="TJy-mT-NoF" firstAttribute="top" secondItem="gld-Wk-41i" secondAttribute="bottom" constant="7.5" id="Lhf-Zq-OBL"/>
+                                                <constraint firstAttribute="topMargin" secondItem="nX9-sO-jB2" secondAttribute="top" id="WOQ-u0-ehA"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="gld-Wk-41i" secondAttribute="leading" id="XVq-yw-cIE"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="TJy-mT-NoF" secondAttribute="leading" id="Zfm-BI-ySh"/>
+                                                <constraint firstAttribute="topMargin" secondItem="SVW-oQ-Mdh" secondAttribute="top" id="eJL-9z-gRW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TJy-mT-NoF" secondAttribute="bottom" constant="3" id="qiG-tk-Jdm"/>
+                                                <constraint firstItem="gld-Wk-41i" firstAttribute="top" secondItem="nX9-sO-jB2" secondAttribute="bottom" constant="9" id="wl6-PA-ufj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -251,30 +247,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFR-K2-jNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1760.8" y="115.59220389805098"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="qTU-mA-FdW">
-            <objects>
-                <viewController id="E9K-dS-GkR" customClass="MapViewController" customModule="TrabalhoP4" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eoa-wG-Ubw"/>
-                        <viewControllerLayoutGuide type="bottom" id="gAY-42-JDu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sbJ-NE-15P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ozu-Ia-40O">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aFF-oW-iy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1016.8" y="-566.26686656671666"/>
         </scene>
         <!--New Service View Controller-->
         <scene sceneID="3uL-gf-VZ6">

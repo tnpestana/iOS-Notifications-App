@@ -44,7 +44,9 @@ class NewServiceViewController: UIViewController {
     
     @IBAction func saveNewService(_ sender: Any) {
         
-        if newServiceTitle.text != "" && newServiceDescription.text != "" {
+        let currentDateTime = Date()
+        
+        if newServiceTitle.text != "" && newServiceDescription.text != "" && datePicker.date >= currentDateTime {
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let selectedDate = datePicker.date
@@ -98,10 +100,11 @@ class NewServiceViewController: UIViewController {
             
             newServiceTitle.text = ""
             newServiceDescription.text = ""
-            
-        } else {
+
+        }
+        else {
         
-            createAlert(titleText: "Alert", messageText: "Please fill in all text fields")
+            createAlert(titleText: "Alert", messageText: "Please fill in all text fields and choose a future date and time")
             
         }
         

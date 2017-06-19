@@ -69,10 +69,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // swipe left for delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
             // apagar a task selecionada do array no core data
             let service = servicesList[indexPath.row]
             context.delete(service)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            // apagar a notificaçao associada à célula apagada
+            
             
             // voltar a fazer um fetch do core data atualizado
             getData()
