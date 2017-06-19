@@ -33,6 +33,11 @@ class SingleRequestViewController: UIViewController {
         formattedDate = dateFormatter.string(from: currentRequest.notificationDate! as Date)
         notificationDateText.text = formattedDate
         notificationDateText.sizeToFit()
+        
+        // Make textViews non editable
+        descriptionText.isEditable = false
+        dateText.isEditable = false
+        notificationDateText.isEditable = false
     }
 
     override func didReceiveMemoryWarning() {
