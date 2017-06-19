@@ -14,18 +14,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Table View round corners
         mainTableView.layer.masksToBounds = true
         mainTableView.layer.cornerRadius = 5
         
+        // Definir este controlador como delegate a datasource da tableview
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        //context.delete(servicesList[0])
     
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        // fetch aos dados guardados no coredata
         getData()
+        
+        // popular a tabela
         mainTableView.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - TableView Delegate & DataSource
     
+    // Criar a célula a ser inserida repetidamente na tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "mainTableCell", for: indexPath) as! MainTableViewCell
