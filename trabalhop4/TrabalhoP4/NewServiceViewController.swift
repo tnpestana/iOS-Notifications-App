@@ -12,12 +12,13 @@ class NewServiceViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var currentRequest: Service?
+    var titles: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // tornar este view controler num delegate do notification center
-        UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+        //UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
         
         // TextView com Rounded Corners
         newServiceDescription.clipsToBounds = true
@@ -61,7 +62,7 @@ class NewServiceViewController: UIViewController {
             }
             // caso seja ediçao de um request existente
             else {
-                var titles: [String] = []
+                
                 titles.append(currentRequest!.requestTitle!)
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [titles[0]])
                 titles.removeAll()
@@ -134,12 +135,5 @@ class NewServiceViewController: UIViewController {
 }
 
 
-// EXTENSION
-// adotar o protocolo notificationcenterdelegate atraves de uma extension
-// faz-se isto para ser possivel receber push notifications em foreground
-extension ViewController: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound])
-    }
-}
+
 

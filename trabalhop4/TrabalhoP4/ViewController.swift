@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import UserNotifications
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -8,6 +9,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var servicesList = [Service]()
+    var titles: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         formattedDate = "Notification: " + dateFormatter.string(from: service.notificationDate! as Date)
         cell.notificationDateLabel.sizeToFit()
         cell.notificationDateLabel.text = formattedDate
-        
+        cell.notificationDateLabel.textAlignment = .left
         cell.editButton.tag = indexPath.row
         
         return cell
@@ -72,11 +74,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             // apagar a task selecionada do array no core data
             let service = servicesList[indexPath.row]
-            context.delete(service)
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
             // apagar a notificaçao associada à célula apagada
+            titles.append(service.requestTitle!)
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [titles[0]])
+            titles.removeAll()
             
+            // apagar o objecto do core data
+            context.delete(service)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
             // voltar a fazer um fetch do core data atualizado
             getData()
