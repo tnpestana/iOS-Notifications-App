@@ -1,3 +1,9 @@
-8207 - Tiago Pestana - tiago.pestana@my.istec.pt
+# iOS Notifications App
 
-8118 - Diogo Alves - diogo.alves501@gmail.com
+College assignment for Swift language classes.
+
+## Authors
+
+* **Diogo Alves**
+
+* **Tiago Pestana** - [tnpestana](https://github.com/tnpestana)
