@@ -1,6 +1,6 @@
 # iOS Notifications App
 
-College assignment for Swift language classes. This application lets the user pick a date and time with an associatied message and will return that message at the given time via push notifications.
+College assignment for Swift language classes. This application lets the user pick a date and time with an associated message and will return that message at the given time via push notifications.
 
 ## Authors
 
